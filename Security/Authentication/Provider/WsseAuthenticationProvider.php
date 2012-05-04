@@ -73,7 +73,6 @@ class WsseAuthenticationProvider implements AuthenticationProviderInterface
 
 		//validate secret
 		$expected = base64_encode(sha1(base64_decode($nonce).$created.$secret, true));
-		var_dump($digest, $expected);
 		return $digest === $expected;
 	}
 
