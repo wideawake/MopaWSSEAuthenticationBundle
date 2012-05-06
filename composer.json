@@ -5,6 +5,10 @@
     "keywords": ["wsse", "symfony2", "authentication"],
     "authors": [
         {
+            "name": "Philipp A. Mohrenweiser",
+            "email": "phiamo@googlemail.com"
+        },
+        {
             "name": "David Joos",
             "homepage": "http://www.escapestudios.co.uk/"
         },
