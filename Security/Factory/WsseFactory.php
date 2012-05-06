@@ -1,6 +1,6 @@
 <?php
 
-namespace Mopa\WSSEAuthenticationBundle\Security\Factory;
+namespace Mopa\Bundle\WSSEAuthenticationBundle\Security\Factory;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;

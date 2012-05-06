@@ -1,6 +1,6 @@
 <?php
 
-namespace Mopa\WSSEAuthenticationBundle\DependencyInjection;
+namespace Mopa\Bundle\WSSEAuthenticationBundle\DependencyInjection;
 
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

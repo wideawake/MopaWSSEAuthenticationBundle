@@ -1,10 +1,10 @@
 <?php
 
-namespace Mopa\WSSEAuthenticationBundle\Tests\Security\Firewall;
+namespace Mopa\Bundle\WSSEAuthenticationBundle\Tests\Security\Firewall;
 
-use Mopa\WSSEAuthenticationBundle\Security\Firewall\Listener;
+use Mopa\Bundle\WSSEAuthenticationBundle\Security\Firewall\Listener;
 use Symfony\Component\HttpFoundation\Response;
-use Mopa\WSSEAuthenticationBundle\Security\Authentication\Token\Token;
+use Mopa\Bundle\WSSEAuthenticationBundle\Security\Authentication\Token\Token;
 
 class ListenerTest extends \PHPUnit_Framework_TestCase
 {

@@ -2,10 +2,10 @@
 /**
  * @author Dmitry Petrov <dmitry.petrov@opensoftdev.ru>
  */
-namespace Mopa\WSSEAuthenticationBundle\Tests\Security\Authentication\Provider;
+namespace Mopa\Bundle\WSSEAuthenticationBundle\Tests\Security\Authentication\Provider;
 
-use Mopa\WSSEAuthenticationBundle\Security\Authentication\Provider\Provider;
-use Mopa\WSSEAuthenticationBundle\Security\Authentication\Token\Token;
+use Mopa\Bundle\WSSEAuthenticationBundle\Security\Authentication\Provider\Provider;
+use Mopa\Bundle\WSSEAuthenticationBundle\Security\Authentication\Token\Token;
 
 class ProviderTestSimple extends Provider
 {

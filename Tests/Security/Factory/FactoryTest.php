@@ -2,9 +2,9 @@
 /**
  * @author Dmitry Petrov <dmitry.petrov@opensoftdev.ru>
  */
-namespace Mopa\WSSEAuthenticationBundle\Tests\Security\Factory;
+namespace Mopa\Bundle\WSSEAuthenticationBundle\Tests\Security\Factory;
 
-use Mopa\WSSEAuthenticationBundle\Security\Factory\Factory;
+use Mopa\Bundle\WSSEAuthenticationBundle\Security\Factory\Factory;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;
 
@@ -36,7 +36,7 @@ class FactoryTest extends \PHPUnit_Framework_TestCase
 
     protected function getFactory()
     {
-        return $this->getMockForAbstractClass('Mopa\WSSEAuthenticationBundle\Security\Factory\Factory', array());
+        return $this->getMockForAbstractClass('Mopa\Bundle\WSSEAuthenticationBundle\Security\Factory\Factory', array());
     }
 
     public function testCreate()

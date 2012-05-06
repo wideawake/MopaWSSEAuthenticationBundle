@@ -1,9 +1,9 @@
 <?php
-namespace Mopa\WSSEAuthenticationBundle;
+namespace Mopa\Bundle\WSSEAuthenticationBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Mopa\WSSEAuthenticationBundle\Security\Factory\WsseFactory;
+use Mopa\Bundle\WSSEAuthenticationBundle\Security\Factory\WsseFactory;
 
 class MopaWSSEAuthenticationBundle extends Bundle
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Mopa\WSSEAuthenticationBundle\Security\Authentication\Provider;
+namespace Mopa\Bundle\WSSEAuthenticationBundle\Security\Authentication\Provider;
 
-use Mopa\WSSEAuthenticationBundle\Security\Authentication\Token\WsseToken;
+use Mopa\Bundle\WSSEAuthenticationBundle\Security\Authentication\Token\WsseToken;
 
 use Symfony\Component\Security\Core\Authentication\Provider\AuthenticationProviderInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;

@@ -19,9 +19,9 @@ spl_autoload_register(function($class)
 {
     $class = ltrim($class, '\\');
 
-    if(0 === strpos($class, 'Mopa\WSSEAuthenticationBundle\\'))
+    if(0 === strpos($class, 'Mopa\Bundle\WSSEAuthenticationBundle\\'))
     {
-        $file = __DIR__.'/../'.str_replace('\\', '/', substr($class, strlen('Mopa\WSSEAuthenticationBundle\\'))).'.php';
+        $file = __DIR__.'/../'.str_replace('\\', '/', substr($class, strlen('Mopa\Bundle\WSSEAuthenticationBundle\\'))).'.php';
         if(file_exists($file))
         {
             require $file;
