@@ -2,9 +2,9 @@
 /**
  * @author Dmitry Petrov <dmitry.petrov@opensoftdev.ru>
  */
-namespace Escape\WSSEAuthenticationBundle\Tests\Security\Authentication\Token;
+namespace Mopa\WSSEAuthenticationBundle\Tests\Security\Authentication\Token;
 
-use Escape\WSSEAuthenticationBundle\Security\Authentication\Token\Token;
+use Mopa\WSSEAuthenticationBundle\Security\Authentication\Token\Token;
 
 /**
  * @author Dmitry Petrov <dmitry.petrov@opensoftdev.ru>

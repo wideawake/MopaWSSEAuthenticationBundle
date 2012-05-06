@@ -5,14 +5,14 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service id="escape_wsse.authentication" class="%escape_wsse.authentication.provider.class%" public="false">
+        <service id="mopa_wsse.authentication" class="%mopa_wsse.authentication.provider.class%" public="false">
             <argument /> <!-- Provider-shared Key -->
             <argument /> <!-- noncedir -->
             <argument /> <!-- lifetime -->
         </service>
 
-        <service id="escape_wsse.security.authentication.listener"
-                 class="%escape_wsse.authentication.listener.class%"
+        <service id="mopa_wsse.security.authentication.listener"
+                 class="%mopa_wsse.authentication.listener.class%"
                  parent="security.authentication.listener.abstract"
                  abstract="true">
         </service>

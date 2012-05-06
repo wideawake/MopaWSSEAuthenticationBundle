@@ -1,6 +1,6 @@
 <?php
 
-namespace Escape\WSSEAuthenticationBundle\Security\Authentication\Token;
+namespace Mopa\WSSEAuthenticationBundle\Security\Authentication\Token;
 
 use Symfony\Component\Security\Core\Authentication\Token\AbstractToken;
 

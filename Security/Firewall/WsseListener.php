@@ -1,6 +1,6 @@
 <?php
 
-namespace Escape\WSSEAuthenticationBundle\Security\Firewall;
+namespace Mopa\WSSEAuthenticationBundle\Security\Firewall;
 
 
 use Symfony\Component\HttpFoundation\Response;
@@ -10,7 +10,7 @@ use Symfony\Component\Security\Core\Exception\AuthenticationException;
 use Symfony\Component\Security\Core\SecurityContextInterface;
 use Symfony\Component\Security\Core\Authentication\AuthenticationManagerInterface;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
-use Escape\WSSEAuthenticationBundle\Security\Authentication\Token\WsseToken;
+use Mopa\WSSEAuthenticationBundle\Security\Authentication\Token\WsseToken;
 use UnexpectedValueException;
 
 class WsseListener implements ListenerInterface

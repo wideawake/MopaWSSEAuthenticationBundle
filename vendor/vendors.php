@@ -18,8 +18,8 @@ foreach($deps as $dep)
     
     if(!is_dir($installDir))
     {
-        system(sprintf('git clone -q %s %s', escapeshellarg($url), escapeshellarg($installDir)));
+        system(sprintf('git clone -q %s %s', mopashellarg($url), mopashellarg($installDir)));
     }
 
-    system(sprintf('cd %s && git fetch -q origin && git reset --hard %s', escapeshellarg($installDir), escapeshellarg($rev)));
+    system(sprintf('cd %s && git fetch -q origin && git reset --hard %s', mopashellarg($installDir), mopashellarg($rev)));
 }

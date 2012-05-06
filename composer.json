@@ -10,19 +10,19 @@
         },
         {
             "name": "David Joos",
-            "homepage": "http://www.escapestudios.co.uk/"
+            "homepage": "http://www.mopastudios.co.uk/"
         },
         {
             "name": "Community contributions",
-            "homepage": "https://github.com/escapestudios/EscapeWSSEAuthenticationBundle/contributors"
+            "homepage": "https://github.com/mopastudios/MopaWSSEAuthenticationBundle/contributors"
         }
     ],
     "autoload": {
         "psr-0": {
-            "Escape\\WSSEAuthenticationBundle": ""
+            "Mopa\\WSSEAuthenticationBundle": ""
         }
     },
-    "target-dir": "Escape/WSSEAuthenticationBundle",
+    "target-dir": "Mopa/WSSEAuthenticationBundle",
     "require": {
         "symfony/symfony": "2.1.*"
     }

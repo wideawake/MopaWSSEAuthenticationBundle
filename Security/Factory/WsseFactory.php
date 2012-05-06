@@ -1,6 +1,6 @@
 <?php
 
-namespace Escape\WSSEAuthenticationBundle\Security\Factory;
+namespace Mopa\WSSEAuthenticationBundle\Security\Factory;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;
@@ -12,10 +12,10 @@ class WsseFactory extends AbstractFactory
 {
 	protected function createAuthProvider(ContainerBuilder $container, $id, $config, $userProviderId)
 	{
-		$authProviderId = 'escape_wsse.authentication.'.$id;
+		$authProviderId = 'mopa_wsse.authentication.'.$id;
 
 		$definition = $container
-			->setDefinition($authProviderId, new DefinitionDecorator('escape_wsse.authentication'))
+			->setDefinition($authProviderId, new DefinitionDecorator('mopa_wsse.authentication'))
 			->replaceArgument(0, $id)
 			->replaceArgument(1, $config['nonce_dir'])
 			->replaceArgument(2, $config['lifetime'])
@@ -27,7 +27,7 @@ class WsseFactory extends AbstractFactory
 
 	protected function getListenerId()
 	{
-		return 'escape_wsse.security.authentication.listener';
+		return 'mopa_wsse.security.authentication.listener';
 	}
     protected function isRememberMeAware($config)
     {
