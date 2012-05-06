@@ -1,0 +1,6 @@
+parameters:
+    mopa_wsse_authentication.buzz.listener.class: Mopa\Bundle\WSSEAuthenticationBundle\Buzz\Listener\WSSEAuthenticationBuzzListener
+    
+services:
+    mopa_wsse_authentication.buzz.listener:
+        class: %mopa_wsse_authentication.buzz.listener.class%

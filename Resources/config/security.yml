@@ -1,0 +1,10 @@
+services:
+    mopa_wsse_authentication:
+        class: %mopa_wsse_authentication.provider.class%
+        arguments: ['', '', ''] # Provider-shared Key, noncedir, lifetime
+        public: false
+
+    mopa_wsse_authentication.security.listener:
+        parent: security.authentication.listener.abstract
+        class: %mopa_wsse_authentication.security.listener.class%
+        abstract: true

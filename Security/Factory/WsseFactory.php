@@ -12,10 +12,10 @@ class WsseFactory extends AbstractFactory
 {
 	protected function createAuthProvider(ContainerBuilder $container, $id, $config, $userProviderId)
 	{
-		$authProviderId = 'mopa_wsse.authentication.'.$id;
+		$authProviderId = 'mopa_wsse_authentication.'.$id;
 
 		$definition = $container
-			->setDefinition($authProviderId, new DefinitionDecorator('mopa_wsse.authentication'))
+			->setDefinition($authProviderId, new DefinitionDecorator('mopa_wsse_authentication'))
 			->replaceArgument(0, $id)
 			->replaceArgument(1, $config['nonce_dir'])
 			->replaceArgument(2, $config['lifetime'])
@@ -27,7 +27,7 @@ class WsseFactory extends AbstractFactory
 
 	protected function getListenerId()
 	{
-		return 'mopa_wsse.security.authentication.listener';
+		return 'mopa_wsse_authentication.security.listener';
 	}
     protected function isRememberMeAware($config)
     {
