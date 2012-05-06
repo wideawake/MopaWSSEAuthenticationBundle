@@ -19,10 +19,10 @@
     ],
     "autoload": {
         "psr-0": {
-            "Mopa\\WSSEAuthenticationBundle": ""
+            "Mopa\\Bundle\\WSSEAuthenticationBundle": ""
         }
     },
-    "target-dir": "Mopa/WSSEAuthenticationBundle",
+    "target-dir": "Mopa/Bundle/WSSEAuthenticationBundle",
     "require": {
         "symfony/symfony": "2.1.*"
     }
