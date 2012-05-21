@@ -15,15 +15,15 @@ use UnexpectedValueException;
 
 class WsseListener implements ListenerInterface
 {
-	protected $securityContext;
-	protected $authenticationManager;
+    protected $securityContext;
+    protected $authenticationManager;
     private $wsseHeader;
 
-	public function __construct(SecurityContextInterface $securityContext, AuthenticationManagerInterface $authenticationManager)
-	{
-		$this->securityContext = $securityContext;
-		$this->authenticationManager = $authenticationManager;
-	}
+    public function __construct(SecurityContextInterface $securityContext, AuthenticationManagerInterface $authenticationManager)
+    {
+        $this->securityContext = $securityContext;
+        $this->authenticationManager = $authenticationManager;
+    }
 
     /**
      * The method returns value of a bit header by the key
@@ -34,7 +34,7 @@ class WsseListener implements ListenerInterface
      */
     private function parseValue($key)
     {
-        if(!preg_match('/'.$key.'="([^"]+)"/', $this->wsseHeader, $matches))
+        if (!preg_match('/'.$key.'="([^"]+)"/', $this->wsseHeader, $matches))
         {
             throw new UnexpectedValueException('The string was not found');
         }
@@ -67,9 +67,9 @@ class WsseListener implements ListenerInterface
         return $result;
     }
 
-	public function handle(GetResponseEvent $event)
-	{
-		$request = $event->getRequest();
+    public function handle(GetResponseEvent $event)
+    {
+        $request = $event->getRequest();
 
         if ($request->headers->has('x-wsse')) {
 
@@ -92,10 +92,10 @@ class WsseListener implements ListenerInterface
                         return $event->setResponse($returnValue);
                     }
                 } catch (AuthenticationException $authException) {
-			        $response = new Response();
-			        $response->setStatusCode(401, $authException ? $authException->getMessage() : null);
-        			$event->setResponse($response);
-        			return;
+                    $response = new Response();
+                    $response->setStatusCode(401, $authException ? $authException->getMessage() : null);
+                    $event->setResponse($response);
+                    return;
                 }
             }
         }
@@ -103,5 +103,5 @@ class WsseListener implements ListenerInterface
         $response = new Response();
         $response->setStatusCode(403);
         $event->setResponse($response);
-	}
+    }
 }

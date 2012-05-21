@@ -34,7 +34,7 @@ class ProviderTest extends \PHPUnit_Framework_TestCase
     {
         $handle = opendir(static::$nonceDir);
         while ($tmp = readdir($handle)) {
-            if($tmp != '..' && $tmp != '.' && $tmp != '') {
+            if ($tmp != '..' && $tmp != '.' && $tmp != '') {
                 unlink(static::$nonceDir . $tmp);
             }
         }
@@ -131,13 +131,13 @@ class ProviderTest extends \PHPUnit_Framework_TestCase
 
         unlink(static::$nonceDir . $nonce);
         /*//expire timestamp after specified lifetime
-        if(time() - strtotime($created) > $this->lifetime)
+        if (time() - strtotime($created) > $this->lifetime)
             return false;
 
-        if($this->nonceDir)
+        if ($this->nonceDir)
         {
             //validate nonce is unique within specified lifetime
-            if(file_exists($this->nonceDir.'/'.$nonce) && file_get_contents($this->nonceDir.'/'.$nonce) + $this->lifetime < time())
+            if (file_exists($this->nonceDir.'/'.$nonce) && file_get_contents($this->nonceDir.'/'.$nonce) + $this->lifetime < time())
                 throw new NonceExpiredException('Previously used nonce detected');
 
             file_put_contents($this->nonceDir.'/'.$nonce, time());
@@ -183,7 +183,7 @@ class ProviderTest extends \PHPUnit_Framework_TestCase
         $provider->authenticate(new Token());
         /*$user = $this->userProvider->loadUserByUsername($token->getUsername());
 
-        if($user && $this->validateDigest($token->digest, $token->nonce, $token->created, $user->getPassword()))
+        if ($user && $this->validateDigest($token->digest, $token->nonce, $token->created, $user->getPassword()))
         {
             $authenticatedToken = new Token($user->getRoles());
             $authenticatedToken->setUser($user);

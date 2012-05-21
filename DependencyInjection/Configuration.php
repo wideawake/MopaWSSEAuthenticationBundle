@@ -13,11 +13,11 @@ class Configuration implements ConfigurationInterface
         $rootNode = $treeBuilder->root('mopa_wsse_authentication');
 
         $rootNode
-	        ->children()
-    		    ->scalarNode('provider_class')->defaultValue('Mopa\Bundle\WSSEAuthenticationBundle\Security\Authentication\Provider\WsseAuthenticationProvider')->end()
-        		->scalarNode('listener_class')->defaultValue('Mopa\Bundle\WSSEAuthenticationBundle\Security\Firewall\WsseListener')->end()
-        		->scalarNode('factory_class')->defaultValue('Mopa\Bundle\WSSEAuthenticationBundle\Security\Factory\WsseFactory')->end()
-        	->end()
+            ->children()
+                ->scalarNode('provider_class')->defaultValue('Mopa\Bundle\WSSEAuthenticationBundle\Security\Authentication\Provider\WsseAuthenticationProvider')->end()
+                ->scalarNode('listener_class')->defaultValue('Mopa\Bundle\WSSEAuthenticationBundle\Security\Firewall\WsseListener')->end()
+                ->scalarNode('factory_class')->defaultValue('Mopa\Bundle\WSSEAuthenticationBundle\Security\Factory\WsseFactory')->end()
+            ->end()
         ;
 
         return $treeBuilder;

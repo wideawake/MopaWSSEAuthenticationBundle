@@ -8,9 +8,9 @@ use Symfony\Component\ClassLoader\UniversalClassLoader;
 $loader = new UniversalClassLoader();
 
 $loader->registerNamespaces(
-	array(
+    array(
     'Symfony'   => $vendorDir.'/symfony/src',
-	)
+    )
 );
 
 $loader->register();
