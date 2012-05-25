@@ -2,8 +2,8 @@
 namespace Mopa\Bundle\WSSEAuthenticationBundle\Buzz\Listener;
 
 use Buzz\Listener\ListenerInterface;
-use Buzz\Message\Request;
-use Buzz\Message\Response;
+use Buzz\Message\RequestInterface;
+use Buzz\Message\MessageInterface;
 
 class WSSEAuthenticationBuzzListener implements ListenerInterface{
 
@@ -18,7 +18,7 @@ class WSSEAuthenticationBuzzListener implements ListenerInterface{
         return $this;
     }
 
-    public function preSend(Request $request)
+    public function preSend(RequestInterface $request)
     {
         if ($this->username === null) {
             throw new \RuntimeException("You have to setCredentials before using WsseListener with Buzz");
@@ -33,7 +33,7 @@ class WSSEAuthenticationBuzzListener implements ListenerInterface{
         $request->addHeader($header);
     }
 
-    public function postSend(Request $request, Response $response)
+    public function postSend(RequestInterface $request, MessageInterface $response)
     {
     }
 }
