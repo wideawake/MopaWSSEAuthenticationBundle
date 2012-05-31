@@ -57,3 +57,11 @@ firewalls:
 factories:
     - "%kernel.root_dir%/../vendor/bundles/Mopa/WSSEAuthenticationBundle/Resources/config/security_factories.yml"
 ```
+
+## Pitfalls / Already encrypted Passwords
+
+If you are not using the Plaintext encoder, the password the user must supply is the password you get from $user->getPassword() (for plaintext, this is the same yes!)
+If you provide it on a https secured site for copy / writing it down, this should be a secure way!
+The WSSE encrypting way is secure providing even plain text passwords, so using a already precrypted password is not considered to be more insecure.
+
+This would e.g. be the case if you are using FOSUserBundle and its user provider as provider for WSSEAuthenticationBundle
