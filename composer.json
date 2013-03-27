@@ -25,5 +25,19 @@
     "target-dir": "Mopa/Bundle/WSSEAuthenticationBundle",
     "require": {
         "symfony/symfony": ">2.1.*"
-    }
+    },
+    "repositories": [
+        {
+            "type":"package",
+            "package": {
+                "version":"dev-master",
+                "name":"wideawake/wsse-authentication-bundle",
+                "source": {
+                    "url":"https://github.com/wideawake/MopaWSSEAuthenticationBundle.git",
+                    "type":"git",
+                    "reference":"master"
+                }
+            }
+        }
+    ],
 }
